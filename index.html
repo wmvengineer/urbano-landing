@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="pt-br">
 
 <head>
     <title>Urbano Soluções Integradas</title>
@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
+    
+    <!-- CORREÇÃO 1: Barra normal (/) e não invertida (\) -->
     <link href="img/favicon.ico" rel="icon" type="image/x-icon">
     <link rel="stylesheet" href="css/skin.css" type="text/css" media="all" />
     
@@ -51,22 +53,20 @@
         .video-portrait-wrapper {
             position: relative;
             width: 100%;
-            /* Define a proporção 9:16 ANTES do vídeo carregar */
             aspect-ratio: 9 / 16;
-            /* Limita a altura para alinhar com o texto e não ficar gigante */
             max-height: 600px; 
-            max-width: 340px; /* Largura média de um celular */
-            margin: 0 auto; /* Centraliza na coluna */
+            max-width: 340px; 
+            margin: 0 auto; 
             border-radius: 20px;
             overflow: hidden;
-            background-color: #eee; /* Cor de fundo enquanto o poster carrega */
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2); /* Sombra elegante */
+            background-color: #eee; 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2); 
         }
 
         .video-portrait-wrapper video {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Garante que o vídeo/poster cubra toda a área */
+            object-fit: cover; 
             display: block;
         }
     </style>
@@ -81,8 +81,9 @@
     <header class="site-header">
         <div class="main-header">
             <div class="d-flex justify-space-between align-items-center  ">
-                <a class="site-logo" href="index.php">
-                    <img src="img/logo-horizontal.png" width="350" height="119" alt="" />
+                <a class="site-logo" href="index.html">
+                    <!-- CORREÇÃO 2: Nome do arquivo sem espaços -->
+                    <img src="img/logo-horizontal.png" width="350" height="119" alt="Logo Urbano" />
                 </a>
                 <div class="main-navigation">
                     <div class="site-toggle">
@@ -150,8 +151,8 @@
             </div>
         </div>
         <div class="hero-images">
-            <img class="fist-image" src="img/hero-circle-one.jpg" width="270" height="270" alt="">
-            <img class="sec-image" src="img/hero-circle-two.jpg" width="270" height="270" alt="">
+            <img class="fist-image" src="img/hero-circle-one.jpg" width="270" height="270" alt="Hero Image 1">
+            <img class="sec-image" src="img/hero-circle-two.jpg" width="270" height="270" alt="Hero Image 2">
         </div>
     </div>
 
@@ -163,7 +164,6 @@
                 <!-- Lado Esquerdo: Vídeo 9:16 -->
                 <div class="site-col col-6 video-col">
                     <div class="video-portrait-wrapper shadow">
-                        <!-- A classe .video-portrait-wrapper no <head> garante o formato 9:16 antes de carregar -->
                         <video controls playsinline poster="img/video-poster.jpg">
                             <source src="img/VIDEO EXIBIÇÃO PLATAFORMA2.mp4" type="video/mp4">
                             Seu navegador não suporta a tag de vídeo.
