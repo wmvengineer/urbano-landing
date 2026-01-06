@@ -3929,3 +3929,42 @@ h3.card-title.h5 {
         height: 100%;
     }
 }
+
+/* --- Estilos para a Seção de Vídeo Instrucional (Adicionado Manualmente) --- */
+
+/* Wrapper para dar o formato de celular/vertical (9:16) */
+.video-portrait-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 350px; /* Limita a largura para parecer um celular */
+    aspect-ratio: 9 / 16;
+    margin: 0 auto; /* Centraliza na coluna */
+    border-radius: 20px; /* Bordas arredondadas */
+    overflow: hidden;
+    background: #000;
+    border: 5px solid #fff; /* Moldura branca opcional */
+}
+
+/* Garante que o vídeo cubra todo o espaço sem distorcer */
+.video-portrait-wrapper video,
+.video-portrait-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Ajuste específico para mobile */
+@media (max-width: 768px) {
+    .video-instruction-section .site-row {
+        flex-direction: column-reverse; /* Texto em cima, vídeo embaixo no mobile (opcional) */
+    }
+    
+    .video-col {
+        margin-top: 40px;
+    }
+    
+    .video-portrait-wrapper {
+        max-width: 300px; /* Um pouco menor em telas pequenas */
+    }
+}
