@@ -306,5 +306,20 @@ setTimeout(() => document.querySelector('.site-header').classList.add('show'), 1
 setTimeout(() => document.querySelector('.hero-slider').classList.add('show'), 100);
 setTimeout(() => document.querySelector('.hero-slider .hero-content .anchor-div').classList.add('show'), 2000);
 
+// Remove o preloader quando a página estiver totalmente carregada
+window.addEventListener("load", function() {
+    // Adiciona a classe 'loaded' ao body, que ativa o CSS para esconder o preloader
+    document.body.classList.add("loaded");
+    
+    // Pequeno delay para garantir que as animações do CSS (skin.css) fluam bem
+    setTimeout(function() {
+        const header = document.querySelector('.site-header');
+        const hero = document.querySelector('.hero-slider');
+        
+        if(header) header.classList.add('show');
+        if(hero) hero.classList.add('show');
+    }, 300);
+});
+
 
 
