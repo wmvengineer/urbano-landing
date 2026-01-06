@@ -10,9 +10,52 @@
     <meta name="author" content="" />
     <link href="img\favicon.ico" rel="icon" type="image/x-icon">
     <link rel="stylesheet" href="css/skin.css" type="text/css" media="all" />
+    
+    <!-- Estilo de Preloader para evitar FOUC (Flash de conteúdo sem estilo) -->
+    <style>
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff; /* Fundo branco para cobrir a bagunça */
+            z-index: 999999; /* Garante que fique acima de tudo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        
+        /* Opcional: Um spinner simples */
+        .loader {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #0F2E5F; /* Cor do seu logo */
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Classe para esconder o preloader */
+        body.loaded #preloader {
+            opacity: 0;
+            visibility: hidden;
+        }
+    </style>
+</head>
 </head>
 
 <body>
+    <!-- ELEMENTO DE CARREGAMENTO -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
     <header class="site-header">
         <div class="main-header">
             <div class="d-flex justify-space-between align-items-center  ">
