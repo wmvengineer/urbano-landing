@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Confirmação de Pagamento - Urbano</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Envie seu comprovante" />
+    <meta name="author" content="Urbano" />
+    <link href="img\logo.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="css/skin.css" type="text/css" media="all" />
+    
+    <!-- Estilos específicos para centralizar esta página mantendo o skin.css original -->
+    <style>
+        .confirmation-hero {
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Sobrescrevendo posicionamento padrão do hero apenas nesta página */
+        .confirmation-hero .hero-content {
+            position: relative;
+            top: auto;
+            left: auto;
+            transform: none;
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+            padding: 0 20px;
+            margin-top: 50px; /* Espaço para o header */
+        }
+
+        .confirmation-hero h2 {
+            margin-bottom: 25px;
+        }
+
+        .whatsapp-btn {
+            background-color: #25D366; /* Cor oficial do WhatsApp */
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header show">
+        <div class="main-header">
+            <div class="d-flex justify-space-between align-items-center">
+                <a class="site-logo" href="index.html">
+                    <img src="img/logo horizontal.png" width="350" height="119" alt="Urbano Logo" />
+                </a>
+                
+                <!-- Menu Simplificado para evitar distrações -->
+                <div class="hdr-btn">
+                    <a href="index.html" class="link-btn">Voltar para a Home</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="slideshow" class="hero-section confirmation-hero show">
+        <div class="bg-lines" style="height: 100%;"></div>
+        
+        <!-- Mantendo a animação do Blob original -->
+        <div class="blob">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path id="blob" fill="#52657D" width="500" height="500">
+                    <animate attributeName="d" dur="15000ms" repeatCount="indefinite"
+                        values="M23.9,-47.1C32.6,-36.4,42.3,-33.2,54.4,-26.6C66.5,-20,81.1,-10,81.9,0.5C82.8,11,69.9,21.9,60.5,33.2C51.1,44.5,45.1,56.2,35.6,57.8C26.1,59.5,13.1,51.1,1.8,48.1C-9.5,45,-19,47.2,-32.2,47.7C-45.3,48.1,-62.2,46.9,-65.7,38.6C-69.1,30.4,-59.2,15.2,-54.2,2.9C-49.2,-9.4,-49.1,-18.8,-46.9,-29.4C-44.8,-40,-40.7,-51.7,-32.6,-62.6C-24.4,-73.6,-12.2,-83.8,-2.3,-79.9C7.6,-75.9,15.3,-57.8,23.9,-47.1Z;
+                        M36.7,-58.9C48,-57,58.1,-48.2,68,-37.2C77.9,-26.2,87.8,-13.1,88.3,0.3C88.8,13.7,79.9,27.3,68.3,35.5C56.7,43.7,42.6,46.4,30.7,48C18.9,49.6,9.5,50.1,-3.5,56.1C-16.4,62.2,-32.8,73.8,-42.9,71.1C-53,68.5,-56.7,51.7,-60.1,37.5C-63.4,23.3,-66.4,11.6,-70.7,-2.4C-74.9,-16.5,-80.3,-33,-75.9,-45.3C-71.4,-57.7,-57.1,-65.8,-42.8,-66C-28.5,-66.2,-14.2,-58.4,-0.8,-57.1C12.7,-55.7,25.3,-60.8,36.7,-58.9Z;
+                        M29.7,-44.7C42,-44.5,57.7,-43.4,69.5,-35.8C81.3,-28.2,89.2,-14.1,86.6,-1.5C84,11.1,70.9,22.2,60.5,32.3C50.1,42.3,42.5,51.3,32.8,62.3C23.2,73.2,11.6,86.1,-0.4,86.9C-12.5,87.6,-25,76.3,-37.1,66.7C-49.1,57.2,-60.8,49.5,-68,38.7C-75.2,27.9,-77.9,13.9,-77.2,0.4C-76.6,-13.2,-72.6,-26.4,-62.3,-31.8C-52,-37.3,-35.4,-35,-24,-35.7C-12.6,-36.4,-6.3,-40.1,1.2,-42.2C8.8,-44.3,17.5,-44.9,29.7,-44.7Z;
+                        M23.9,-47.1C32.6,-36.4,42.3,-33.2,54.4,-26.6C66.5,-20,81.1,-10,81.9,0.5C82.8,11,69.9,21.9,60.5,33.2C51.1,44.5,45.1,56.2,35.6,57.8C26.1,59.5,13.1,51.1,1.8,48.1C-9.5,45,-19,47.2,-32.2,47.7C-45.3,48.1,-62.2,46.9,-65.7,38.6C-69.1,30.4,-59.2,15.2,-54.2,2.9C-49.2,-9.4,-49.1,-18.8,-46.9,-29.4C-44.8,-40,-40.7,-51.7,-32.6,-62.6C-24.4,-73.6,-12.2,-83.8,-2.3,-79.9C7.6,-75.9,15.3,-57.8,23.9,-47.1Z">
+                    </animate>
+                </path>
+            </svg>
+        </div>
+
+        <div class="hero-content">
+            <p class="sub-heading anim-text" style="opacity: 1;">Quase lá!</p>
+            <h2 class="anim-text show" style="opacity: 1;">
+                Recebemos seu pedido.
+            </h2>
+            <p style="color: #333; font-size: 1.2rem; margin-bottom: 30px;">
+                Para liberar seu acesso ao sistema Urbano imediatamente, clique no botão abaixo e envie o comprovante de pagamento para nossa equipe no WhatsApp.
+            </p>
+            <div class="anchor-div show" style="opacity: 1; top: 0;">
+                <!-- Link direto para a API do WhatsApp com mensagem pré-definida -->
+                <a href="https://wa.me/551152417599?text=Ol%C3%A1%2C+acabei+de+fazer+o+pagamento+do+plano+Urbano+e+gostaria+de+enviar+o+comprovante." 
+                   class="site-btn whatsapp-btn" 
+                   target="_blank">
+                    <!-- Ícone SVG simples de envio -->
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 2L11 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Enviar Comprovante
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="site-wrapper">
+            <div class="bottom-footer">
+                <p class="site-copyright"><span> © Urbano 2025. Todos os direitos reservados.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts (necessário para o funcionamento básico, mesmo sem slider) -->
+    <script src="js/script.js"></script>
+    <script>
+        // Pequeno ajuste para garantir que as animações de texto apareçam mesmo sem scroll
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                const elements = document.querySelectorAll('.anim-text');
+                elements.forEach(el => el.classList.add('show'));
+            }, 500);
+        });
+    </script>
+</body>
+</html>
